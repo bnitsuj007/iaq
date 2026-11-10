@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Snap one photo of your furnace and Better Air NW sends back three clear air-cleaning options with installed pricing. Backed by testing, not guesswork. Everett, WA.">
+<meta name="robots" content="noindex,nofollow"><!-- PREVIEW ONLY: remove at go-live on iaq.betterairnw.com -->
 <meta name="theme-color" content="#123f69">
 <title>Three Clear Air-Cleaning Options From One Photo | Better Air NW</title>
 
@@ -574,7 +575,7 @@
           <span id="review-count" aria-live="polite">1 of 3</span>
           <button class="circle-btn" id="review-next" type="button" aria-label="Next review"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"></path></svg></button>
         </div>
-        <p class="review-context">Excerpts from service reviews published by Better Air NW.</p>
+        <p class="review-context">Excerpts from customer reviews published on Yelp.</p>
       </div>
     </div>
   </section>
@@ -740,6 +741,7 @@
   var MAX_DIM = 1600;         // longest edge after resize
   var JPEG_QUALITY = 0.8;     // output quality
   var ENDPOINT = "/api/lead"; // STUB: Cloudflare Worker built separately.
+  var PREVIEW_MODE = true; // PREVIEW ONLY: no live backend yet. Set false at go-live to POST real leads.
 
   var cameraInput  = document.getElementById('camera-input');
   var libraryInput = document.getElementById('library-input');
@@ -859,6 +861,13 @@
 
     submitBtn.disabled = true;
     statusEl.textContent = "Sending your request...";
+
+    if (PREVIEW_MODE) {
+      // Preview: skip the live POST and show the real success flow.
+      window.trackEvent("form_submit", {source:"iaq-landing-v2", preview:true});
+      setTimeout(function(){ window.location.href = "thank-you.html"; }, 600);
+      return;
+    }
 
     fetch(ENDPOINT, { method:'POST', body:fd })
       .then(function(res){
