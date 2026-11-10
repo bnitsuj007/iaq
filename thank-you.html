@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Thank you. Better Air NW has received your photo and will send your personalized air-cleaning options.">
+<meta name="theme-color" content="#123f69">
+<title>Thank You | Better Air NW</title>
+
+<!-- ============================================================
+     TRACKING SNIPPET PLACEHOLDER
+     Post-submission confirmation URL, so it doubles as the conversion-tracking
+     landing. Paste GA4 / GTM / Cloudflare Web Analytics here and fire a
+     conversion on load. window.trackEvent('lead_confirmed') is called below.
+     ============================================================ -->
+
+<style>
+  :root{
+    --navy:#123f69;--navy-deep:#0f3357;--orange:#e3611b;--slate:#5a6b7d;--line:#e2e9f1;--bg-tint:#f4f7fb;--green:#2f8a4e;
+    --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--font);color:#16263b;background:var(--bg-tint);line-height:1.55;
+    min-height:100vh;display:flex;flex-direction:column}
+  a{color:var(--navy)}
+  .site-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;
+    max-width:1120px;margin:0 auto;width:100%;background:#fff;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:8px;text-decoration:none}
+  .phone-link{display:inline-flex;align-items:center;gap:8px;color:var(--navy);font-weight:800;text-decoration:none;min-height:44px}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px}
+  .card{background:#fff;border:1px solid var(--line);border-top:6px solid var(--orange);border-radius:22px;
+    box-shadow:0 12px 34px rgba(18,47,105,.09);max-width:580px;width:100%;padding:38px 28px;text-align:center}
+  .tick{width:74px;height:74px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;
+    justify-content:center;margin:0 auto 18px}
+  .tick svg{width:38px;height:38px}
+  h1{color:var(--navy);font-size:1.9rem;margin:0 0 .4em;font-weight:800;letter-spacing:-.015em}
+  .lead{font-size:1.12rem;margin:0 0 1.3rem}
+  .steps{text-align:left;background:var(--bg-tint);border-radius:14px;padding:20px 22px;margin:0 0 1.4rem}
+  .steps h2{font-size:1rem;color:var(--navy);margin:0 0 12px}
+  .steps ol{margin:0;padding-left:20px}
+  .steps li{margin:8px 0}
+  .muted{color:var(--slate);font-size:.92rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--navy);color:#fff;
+    font-weight:800;border-radius:12px;min-height:54px;padding:0 26px;text-decoration:none;margin-top:6px}
+  .btn:hover{background:var(--navy-deep)}
+  .site-footer{background:var(--navy-deep);color:#dce6f1;padding:22px 20px;text-align:center;font-size:.9rem}
+  .site-footer a{color:#dce6f1}
+  @media(min-width:760px){h1{font-size:2.2rem}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Better Air NW home"><img src="assets/better-air-nw-logo.png" alt="Better Air NW" style="height:36px;width:auto;display:block"></a>
+  <a class="phone-link" href="tel:+12068985743">
+    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3-3 1c-3 8 8 19 16 16l1-3-5-3-2 2c-3-1-5-3-6-6l2-2-3-5Z"></path></svg>
+    <span>206-898-5743</span>
+  </a>
+</header>
+
+<main>
+  <div class="card">
+    <div class="tick" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg>
+    </div>
+    <h1>Thank you. Your photo is on its way to us.</h1>
+    <p class="lead">Better Air NW has received your request. A member of our team will review your photo and get back to you with your personalized options.</p>
+
+    <div class="steps">
+      <h2>What happens next</h2>
+      <ol>
+        <li>We review your photo and your existing system.</li>
+        <li>We prepare three personalized options with installed pricing.</li>
+        <li>We reach out by email with your options. No in-home sales appointment required.</li>
+      </ol>
+    </div>
+
+    <p class="muted">Need to add something or have a question? Call or text us at <a href="tel:+12068985743">206-898-5743</a>.</p>
+    <a class="btn" href="index.html">Back to the home page</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  Better Air NW Heating &amp; Cooling &bull; 12428 Hwy 99 #51, Everett, WA 98204 &bull; <a href="tel:+12068985743">206-898-5743</a>
+</footer>
+
+<script>
+  window.trackEvent = window.trackEvent || function(name, data){
+    try{ if(window.dataLayer){ window.dataLayer.push(Object.assign({event:name}, data||{})); } }catch(e){}
+    if(window.console && console.debug){ console.debug("[track]", name, data||{}); }
+  };
+  // Conversion event. Wire this to the real analytics snippet above before go-live.
+  window.trackEvent("lead_confirmed", {page:"thank-you-v2"});
+</script>
+</body>
+</html>
