@@ -390,7 +390,7 @@
   <!-- ===================== SECTION 1b: INTRO VIDEO ===================== -->
   <section class="container intro-video-wrap" aria-label="Intro video from Better Air NW">
     <figure class="intro-video">
-      <video id="introVideo" controls preload="metadata" playsinline poster="assets/intro-poster.jpg" onplay="this.closest('.intro-video').classList.add('playing')">
+      <video id="introVideo" preload="metadata" playsinline poster="assets/intro-poster.jpg" onplay="this.setAttribute('controls',''); this.closest('.intro-video').classList.add('playing')">
         <source src="assets/intro.mp4" type="video/mp4">
       </video>
       <button type="button" class="vid-play" aria-label="Play intro video" onclick="var v=document.getElementById('introVideo'); v.play(); this.closest('.intro-video').classList.add('playing');">
