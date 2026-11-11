@@ -143,10 +143,9 @@
     box-shadow:var(--shadow);padding:0;overflow:hidden;max-width:720px;margin:0 auto}
   .form-head{background:var(--bg-tint);padding:22px 22px 18px;border-bottom:1px solid var(--line);text-align:center}
   .form-head h2{font-size:1.5rem;margin-bottom:.25em}
-  .form-head .mini-steps{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
-    color:var(--slate);font-weight:700;font-size:.92rem;margin-top:6px}
-  .form-head .mini-steps b{color:var(--navy)}
-  .form-head .mini-steps .dot{width:5px;height:5px;border-radius:50%;background:var(--orange)}
+  .form-head .mini-steps{list-style:none;padding:0;margin:12px auto 0;max-width:430px;text-align:left;display:grid;gap:11px}
+  .form-head .mini-steps li{color:var(--slate);font-size:.92rem;line-height:1.45}
+  .form-head .mini-steps b{display:block;color:var(--navy);font-weight:800}
   .form-body{padding:24px 20px 26px}
   .field{margin-bottom:18px}
   .field label{display:block;font-weight:800;color:var(--navy);margin-bottom:8px}
@@ -232,6 +231,9 @@
   .sol h3{margin:0 0 8px}
   .sol p{color:var(--navy-ink);margin:0;font-size:.98rem}
   .sol .note{color:var(--slate);font-size:.86rem;margin-top:8px;display:block}
+  .sol .tier-row{display:block;margin-bottom:6px}
+  .sol .tier-row .tier{margin-bottom:0}
+  .sol .tier-row .note{display:inline;margin-top:0;margin-left:3px}
 
   /* reviews */
   .rating-head{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px}
@@ -313,7 +315,7 @@
     .phone-link .lbl{display:inline}
     .hero{padding:56px 0 16px}
     .band{padding:68px 0}
-    .hero-inner{display:grid;grid-template-columns:1.15fr .95fr;gap:40px;align-items:center}
+    .hero-inner{display:grid;grid-template-columns:1.15fr .95fr;gap:40px;align-items:start}
     .proof-card{margin:0}
     .proof-num{font-size:3.4rem}
     .trust-row{gap:12px 22px}
@@ -326,8 +328,7 @@
     .form-body{padding:30px 40px 34px}
   }
   /* intro video (section 1b) */
-  .intro-video-wrap{padding-top:30px;padding-bottom:4px}
-  .intro-video{position:relative;max-width:680px;margin:0 auto;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(18,47,105,.14);background:#000}
+  .intro-video{position:relative;max-width:680px;margin:18px auto 0;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(18,47,105,.14);background:#000}
   .intro-video video{display:block;width:100%;height:100%;object-fit:cover}
   .intro-video .vid-play{position:absolute;inset:0;margin:auto;width:74px;height:74px;border:0;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 26px rgba(0,0,0,.32);transition:transform .15s}
   .intro-video .vid-play svg{width:32px;height:32px;margin-left:4px}
@@ -352,22 +353,30 @@
   <section class="hero" aria-label="Get your personalized air-cleaning options">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Whole-Home Air Cleaning &bull; Everett, WA</p>
-        <h1>Cleaner Air for Your Whole Home. Without <span class="orange-underline">the Guesswork.</span></h1>
-        <p class="hero-sub">Send <b>one photo of your furnace</b> and we send back <b>three clear options with installed pricing</b>. No in-home sales visit, no pressure.</p>
+        <p class="eyebrow">Whole-Home Air Cleaning</p>
+        <h1>Get 3 Clear Air-Cleaning Options From <span class="orange-underline">One Photo.</span></h1>
+        <p class="hero-sub">Send <b>one photo of your furnace</b>. Get <b>three clear options with installed pricing</b> and our recommendation. No sales visit.</p>
 
         <div class="hero-cta-row">
           <a href="#get-options" class="btn btn-cta" data-scroll>
-            <span class="label">Take a Photo to Start</span>
+            <span class="label">Get My 3 Options</span>
             <span class="arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></span>
           </a>
         </div>
 
         <div class="trust-row">
-          <span><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> No in-home sales appointment</span>
-          <span><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> Quick and easy</span>
-          <span><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> Local Everett team</span>
+          <span><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> No sales appointment</span>
+          <span><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> Quick &amp; easy</span>
         </div>
+
+        <figure class="intro-video">
+      <video id="introVideo" preload="metadata" playsinline poster="assets/intro-poster.jpg" onplay="this.setAttribute('controls',''); this.closest('.intro-video').classList.add('playing')">
+        <source src="assets/intro.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="vid-play" aria-label="Play intro video" onclick="var v=document.getElementById('introVideo'); v.play(); this.closest('.intro-video').classList.add('playing');">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+      </button>
+    </figure>
       </div>
 
       <!-- Proof pulled UP: the 30+ filters tested story is the strongest asset. -->
@@ -388,28 +397,18 @@
     </div>
   </section>
 
-  <!-- ===================== SECTION 1b: INTRO VIDEO ===================== -->
-  <section class="container intro-video-wrap" aria-label="Intro video from Better Air NW">
-    <figure class="intro-video">
-      <video id="introVideo" preload="metadata" playsinline poster="assets/intro-poster.jpg" onplay="this.setAttribute('controls',''); this.closest('.intro-video').classList.add('playing')">
-        <source src="assets/intro.mp4" type="video/mp4">
-      </video>
-      <button type="button" class="vid-play" aria-label="Play intro video" onclick="var v=document.getElementById('introVideo'); v.play(); this.closest('.intro-video').classList.add('playing');">
-        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-      </button>
-    </figure>
-  </section>
+  
 
   <!-- ===================== SECTION 2: PHOTO-FIRST FORM ===================== -->
   <section class="container form-wrap">
     <div class="form-shell">
       <div class="form-head">
         <h2 id="get-options">Get Your Three Options</h2>
-        <div class="mini-steps" aria-label="How it works">
-          <b>1. Snap a photo</b><span class="dot" aria-hidden="true"></span>
-          <b>2. We review it</b><span class="dot" aria-hidden="true"></span>
-          <b>3. You get your options</b>
-        </div>
+        <ul class="mini-steps" aria-label="How it works">
+          <li><b>1. Snap a photo</b>Stand back so the whole unit is in frame.</li>
+          <li><b>2. We review it</b>I'll match it to the best setups from our testing.</li>
+          <li><b>3. You get your options</b>Emailed within 24 hours.</li>
+        </ul>
       </div>
 
       <div class="form-body">
@@ -420,7 +419,7 @@
             <div class="photo-zone" id="photo-zone">
               <div class="cam" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 9.5 3h5L16 6h4a1 1 0 0 1 1 1v12H3V7a1 1 0 0 1 1-1h4Z"></path><circle cx="12" cy="12" r="4"></circle></svg></div>
               <h4>Snap one photo of your furnace</h4>
-              <p class="hint">Stand back so the whole system is in frame. <a class="photo-tips-link" href="#photo-guidance" data-scroll>Photo tips</a></p>
+              <p class="hint"><a class="photo-tips-link" href="#photo-guidance" data-scroll>Good photo example</a></p>
               <button type="button" class="btn btn-navy" id="take-photo">
                 <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6 9.5 3h5L16 6h4a1 1 0 0 1 1 1v12H3V7a1 1 0 0 1 1-1h4Z"></path><circle cx="12" cy="12" r="4"></circle></svg>
                 Take a Photo
@@ -443,8 +442,7 @@
 
             <!-- Reassurance placed right at the upload decision -->
             <ul class="upload-trust">
-              <li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> Your photo is only used to prepare your quote.</li>
-              <li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> No in-home sales appointment to get your options.</li>
+              <li><svg class="check" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"></path></svg> Your photo is only used to prepare your quote. No sales appointment required.</li>
             </ul>
           </div>
 
@@ -491,6 +489,34 @@
     </div>
   </section>
 
+  <!-- ===================== SECTION 4: SOLUTIONS ===================== -->
+  <section class="band">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">Your Options</p>
+        <h2>Three Clear Options. Not Just the Most Expensive One.</h2>
+        <p>You get three customized options with an explanation of why people choose each, so you can decide what works best for you.</p>
+      </div>
+      <div class="sol-grid">
+        <article class="sol">
+          <span class="tier">Essential</span>
+          <h3>The smart starting point</h3>
+          <p>Proper filtration + expert installation.</p>
+        </article>
+        <article class="sol">
+          <span class="tier">Enhanced</span>
+          <h3>A step further</h3>
+          <p>Essential plus airborne particle reduction.</p>
+        </article>
+        <article class="sol">
+          <span class="tier-row"><span class="tier">Advanced</span> <span class="note">(Rarely recommended.)</span></span>
+          <h3>Maximum system</h3>
+          <p>Electronic air-cleaning system.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== SECTION 3: RESEARCH ENGINE (testing + science) ===================== -->
   <section id="research" class="band engine">
     <div class="container">
@@ -498,6 +524,10 @@
         <p class="eyebrow">Backed by Testing, Not Guesswork</p>
         <h2>Why One Photo Is Enough</h2>
         <p class="lead">Most companies recommend from a product list. We did the homework first. We tested more than 30 filter and air-cleaning configurations in a controlled space and scored each one, so we can look at your system in a photo and point you to the setup that fits it.</p>
+      </div>
+
+      <div class="finding">
+        <b>Our biggest finding:</b> a properly fitted, high-quality filter is often the smartest place to start. More technology does not automatically mean better value.
       </div>
 
       <div class="engine-stats">
@@ -526,10 +556,6 @@
         </div>
       </div>
 
-      <div class="finding">
-        <b>Our biggest finding:</b> a properly fitted, high-quality filter is often the smartest place to start. More technology does not automatically mean better value.
-      </div>
-
       <details class="science-toggle">
         <summary>The science behind our testing <span class="pm" aria-hidden="true">+</span></summary>
         <div class="science-body">
@@ -550,34 +576,7 @@
     </div>
   </section>
 
-  <!-- ===================== SECTION 4: SOLUTIONS ===================== -->
-  <section class="band">
-    <div class="container">
-      <div class="sec-head">
-        <p class="eyebrow">Your Options</p>
-        <h2>Three Clear Options. Not the Most Expensive One.</h2>
-        <p>You get three customized options with an explanation of why people choose each, so you can decide what works best for you.</p>
-      </div>
-      <div class="sol-grid">
-        <article class="sol">
-          <span class="tier">Essential</span>
-          <h3>The smart starting point</h3>
-          <p>A proper air filtration configuration along with expert installation.</p>
-        </article>
-        <article class="sol">
-          <span class="tier">Enhanced</span>
-          <h3>A step further</h3>
-          <p>The Essential setup plus airborne particle reduction technology.</p>
-        </article>
-        <article class="sol">
-          <span class="tier">Advanced</span>
-          <h3>Maximum system</h3>
-          <p>Electronic air-cleaning system, professionally installed.</p>
-          <span class="note">Rarely recommended.</span>
-        </article>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ===================== SECTION 5: REVIEWS ===================== -->
   <section class="band band-tint">
@@ -629,7 +628,6 @@
           <p class="eyebrow">Quick Tip</p>
           <h2>How to Take a Good Photo</h2>
           <p class="sub">A step back makes a big difference. Leave equipment panels in place. Do not climb or enter an unsafe space.</p>
-          <p class="guide-note"><span class="gn-emph">Your first visit can be for installation, not a sales appointment.</span></p>
           <a href="#get-options" class="btn btn-outline" data-scroll style="max-width:360px;margin-top:6px">Back up to the photo upload</a>
         </div>
       </div>
@@ -658,7 +656,7 @@
       <h2>Ready to see your options?</h2>
       <p>Take one photo of your furnace and we will send back three clear options with installed pricing.</p>
       <a href="#get-options" class="btn btn-cta" data-scroll>
-        <span class="label">Take a Photo to Start</span>
+        <span class="label">Get My 3 Options</span>
         <span class="arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></span>
       </a>
       <p class="sub">No in-home sales appointment. No pressure.</p>
@@ -689,7 +687,7 @@
 
 <div id="sticky-cta" class="sticky-cta">
   <a href="#get-options" class="btn btn-cta" data-scroll>
-    <span class="label">Take a Photo to Start</span>
+    <span class="label">Get My 3 Options</span>
     <span class="arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></span>
   </a>
 </div>
