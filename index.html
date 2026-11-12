@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Snap one photo of your furnace and Better Air NW sends back three clear air-cleaning options with installed pricing. Backed by testing, not guesswork. Everett, WA.">
-<meta name="robots" content="noindex,nofollow"><!-- PREVIEW ONLY: remove at go-live on iaq.betterairnw.com -->
+<meta name="robots" content="index,follow">
 <meta name="theme-color" content="#123f69">
 <title>Three Clear Air-Cleaning Options From One Photo | Better Air NW</title>
 
@@ -474,7 +474,7 @@
           </div>
 
           <!-- Cloudflare Turnstile. Replace the data-sitekey placeholder with the real key. -->
-          <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_PLACEHOLDER" data-appearance="interaction-only" data-theme="light"></div>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAF-qj5axVA1m3urD" data-appearance="interaction-only" data-theme="light"></div>
 
           <div class="submit-row">
             <button type="submit" class="btn btn-cta" id="submit-btn">
@@ -760,7 +760,7 @@
   var MAX_DIM = 1600;         // longest edge after resize
   var JPEG_QUALITY = 0.8;     // output quality
   var ENDPOINT = "/api/lead"; // STUB: Cloudflare Worker built separately.
-  var PREVIEW_MODE = true; // PREVIEW ONLY: no live backend yet. Set false at go-live to POST real leads.
+  var PREVIEW_MODE = false; // LIVE: posts real leads to /api/lead -> ServiceTitan.
 
   var cameraInput  = document.getElementById('camera-input');
   var libraryInput = document.getElementById('library-input');
