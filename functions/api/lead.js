@@ -108,14 +108,19 @@ export async function onRequestPost(context) {
       photoUrl = base ? base + "/" + key : key;
     }
 
-    // Build the lead summary (the photo link lives here since the lead endpoint takes no file).
-    const parts = [
+    // Build the lead summary. ServiceTitan shows no inline image on a lead (photo attachments only
+    // exist on Jobs, which the client declined to avoid touching dispatch/reporting), so the photo
+    // link is the ONLY way to view it. Lead with it, loudly, on its own line so it's unmissable and
+    // one-click. (Client asked 2026-11-14 to make the URL more noticeable.)
+    const header = photoUrl
+      ? ("PHOTO OF FURNACE (click to view):\n" + photoUrl)
+      : "Furnace photo submitted (not stored).";
+    const details = [
       "New IAQ landing-page request (betterairnw.com).",
       concernLine(concern),
-      photoUrl ? ("Furnace photo: " + photoUrl) : "Furnace photo submitted (not stored).",
       "Source: " + source
     ].filter(Boolean);
-    const summary = parts.join("\n");
+    const summary = header + "\n\n" + details.join("\n");
 
     // Create the ServiceTitan lead via the CRM web-form endpoint.
     const accessToken = await getServiceTitanToken(env);
