@@ -6,7 +6,7 @@
 <meta name="description" content="Snap one photo of your furnace and Better Air NW sends back three clear air-cleaning options with installed pricing. Backed by testing, not guesswork. Everett, WA.">
 <meta name="robots" content="index,follow">
 <meta name="theme-color" content="#123f69">
-<title>Three Clear Air-Cleaning Options From One Photo | Better Air NW</title>
+<title>Three Proven Air-Cleaning Options From One Photo | Better Air NW</title>
 
 <!-- ============================================================
      VERSION B (concept) of the Better Air NW filter-research landing page.
@@ -138,9 +138,10 @@
     text-decoration:underline;text-underline-offset:3px;margin-top:14px;position:relative;z-index:2;font-size:.95rem}
 
   /* ---------- form card (section 2) ---------- */
-  .form-wrap{padding:30px 0 10px}
-  .form-shell{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
-    box-shadow:var(--shadow);padding:0;overflow:hidden;max-width:720px;margin:0 auto}
+  .form-wrap{padding:38px 0 30px}
+  .form-shell{background:#fff;border:1px solid var(--line);border-top:6px solid var(--orange);
+    border-radius:var(--radius-lg);box-shadow:0 18px 50px rgba(18,47,105,.16);padding:0;overflow:hidden;
+    max-width:720px;margin:0 auto}
   .form-head{background:var(--bg-tint);padding:22px 22px 18px;border-bottom:1px solid var(--line);text-align:center}
   .form-head h2{font-size:1.5rem;margin-bottom:.25em}
   .form-head .mini-steps{list-style:none;padding:0;margin:12px auto 0;max-width:430px;text-align:left;display:grid;gap:11px}
@@ -188,6 +189,19 @@
   .form-status.err{color:var(--red)}
   .form-foot{text-align:center;color:var(--slate);font-size:.9rem;margin:14px 0 0}
   .form-foot a{font-weight:800}
+
+  /* primary CTA band (makes the form section stand out) + inline photo examples near the upload */
+  .form-band{background:
+      radial-gradient(900px 320px at 50% -12%, rgba(227,97,27,.10), transparent 62%),
+      var(--bg-tint)}
+  .form-examples{display:flex;gap:12px;justify-content:center;margin:0 0 18px}
+  .form-examples figure{margin:0;width:50%;max-width:150px;text-align:center}
+  .form-examples img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}
+  .form-examples .good img{border:3px solid var(--green)}
+  .form-examples .bad img{border:3px solid var(--red)}
+  .form-examples figcaption{font-weight:800;font-size:.82rem;margin-top:6px;line-height:1.2}
+  .form-examples .good figcaption{color:var(--green)}
+  .form-examples .bad figcaption{color:var(--red)}
 
   /* ---------- generic section framing ---------- */
   .band{padding:48px 0}
@@ -315,8 +329,12 @@
     .phone-link .lbl{display:inline}
     .hero{padding:56px 0 16px}
     .band{padding:68px 0}
-    .hero-inner{display:grid;grid-template-columns:1.15fr .95fr;gap:40px;align-items:start}
-    .proof-card{margin:0}
+    /* Option B (client-approved 2026-11-14): single centered, stacked hero on desktop. */
+    .hero-inner{display:block;max-width:740px;margin:0 auto;text-align:center}
+    .hero-sub{margin-left:auto;margin-right:auto}
+    .trust-row{justify-content:center}
+    .hero-cta-row .btn-cta{margin-left:auto;margin-right:auto}
+    .proof-card{margin:28px auto 0;max-width:740px;text-align:left}
     .proof-num{font-size:3.4rem}
     .trust-row{gap:12px 22px}
     .engine-stats{grid-template-columns:1fr 1fr}
@@ -354,8 +372,8 @@
     <div class="container hero-inner">
       <div class="hero-copy">
         <p class="eyebrow">Whole-Home Air Cleaning</p>
-        <h1>Get 3 Clear Air-Cleaning Options From <span class="orange-underline">One Photo.</span></h1>
-        <p class="hero-sub">Send <b>one photo of your furnace</b>. Get <b>three clear options with installed pricing</b> and our recommendation. No sales visit.</p>
+        <h1>Get 3 Proven Air-Cleaning Options From <span class="orange-underline">One Photo.</span></h1>
+        <p class="hero-sub">Send <b>one photo of your furnace</b>. Get <b>three clear options with installed pricing</b> and my recommendations. No sales visit.</p>
 
         <div class="hero-cta-row">
           <a href="#get-options" class="btn btn-cta" data-scroll>
@@ -400,18 +418,24 @@
   
 
   <!-- ===================== SECTION 2: PHOTO-FIRST FORM ===================== -->
-  <section class="container form-wrap">
+  <section class="form-band" aria-label="Get your three options">
+    <div class="container form-wrap">
     <div class="form-shell">
       <div class="form-head">
+        <p class="eyebrow" style="text-align:center;margin-bottom:.45rem">Start Here</p>
         <h2 id="get-options">Get Your Three Options</h2>
         <ul class="mini-steps" aria-label="How it works">
-          <li><b>1. Snap a photo</b>Stand back so the whole unit is in frame.</li>
-          <li><b>2. We review it</b>I'll match it to the best setups from our testing.</li>
-          <li><b>3. You get your options</b>Emailed within 24 hours.</li>
+          <li><b>Step 1: Snap a photo</b>Stand back so the whole unit is in frame.</li>
+          <li><b>Step 2: Quick review</b>I'll match it to the best setups from our testing.</li>
+          <li><b>Step 3: Your options are emailed</b>Usually within 24 hours. Often, much sooner.</li>
         </ul>
       </div>
 
       <div class="form-body">
+        <div class="form-examples" aria-label="What a good photo looks like">
+          <figure class="good"><img src="assets/good-photo.jpg" alt="Good photo example: the whole furnace in frame" loading="lazy"><figcaption>Good: whole unit in frame</figcaption></figure>
+          <figure class="bad"><img src="assets/bad-photo.jpg" alt="Bad photo example: too close to the unit" loading="lazy"><figcaption>Bad: too close</figcaption></figure>
+        </div>
         <form id="lead-form" novalidate>
 
           <!-- Step 1: the photo is the primary action -->
@@ -486,6 +510,7 @@
           <p class="form-foot">Prefer to talk it through? Call or text <a href="tel:+12068985743">206-898-5743</a>.</p>
         </form>
       </div>
+    </div>
     </div>
   </section>
 
